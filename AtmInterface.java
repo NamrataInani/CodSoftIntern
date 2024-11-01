@@ -74,6 +74,7 @@ private void withdraw(){
     double amount=sc.nextInt();
     account.withdraw(amount);
 }
+
 }
 public class AtmInterface {
     public static void main(String[] args) {
@@ -81,9 +82,12 @@ public class AtmInterface {
         Scanner sc=new Scanner(System.in);
         System.out.println("enter your 4 digit pin:");
         int enteredPin=sc.nextInt();
+        
         BankAccount userAccount=new BankAccount(1000.00);
         ATM atm=new ATM(userAccount);
         atm.run();
+        sc.close();
     }
+    
 }
  
